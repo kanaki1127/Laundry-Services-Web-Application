@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Laundry Services</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Smooth scrolling -->
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar">
+      <div class="logo">CleanWash</div>
+
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+
+      <div class="user-name">Ravi</div>
+    </nav>
+
+    <!-- ================= HERO SECTION ================= -->
+    <section class="hero" id="home">
+      <div class="hero-left">
+        <h1>Professional Laundry Services</h1>
+        <p>Fast, affordable and quality laundry services at your doorstep.</p>
+        <button onclick="scrollToBooking()">Book a Service Today</button>
+      </div>
+
+      <div class="hero-right">
+        <img
+          src="https://images.unsplash.com/photo-1581578731548-c64695cc6952"
+          alt="Laundry Image"
+        />
+      </div>
+    </section>
+
+    <!-- ================= SERVICE OVERVIEW ================= -->
+    <section class="overview">
+      <div>15+ Laundry Services</div>
+      <div>240+ Happy Customers</div>
+      <div>2+ Years Experience</div>
+    </section>
+
+    <!-- ================= BOOKING SERVICES ================= -->
+    <section class="booking" id="services">
+      <!-- LEFT: SERVICES LIST -->
+      <div class="services">
+        <h3>Our Services</h3>
+
+        <div class="service">
+          <span>Washing - ₹100</span>
+          <button onclick="addItem('Washing',100)">Add Items</button>
+        </div>
+
+        <div class="service">
+          <span>Ironing - ₹50</span>
+          <button onclick="addItem('Ironing',50)">Add Items</button>
+        </div>
+
+        <div class="service">
+          <span>Dry Cleaning - ₹150</span>
+          <button onclick="addItem('Dry Cleaning',150)">Add Items</button>
+        </div>
+
+        <p class="info">Add items to the cart</p>
+      </div>
+
+      <!-- RIGHT: CART + BOOK -->
+      <div class="cart">
+        <div class="cart-items">
+          <h3>Selected Items</h3>
+          <ul id="itemList"></ul>
+          <p>Total: ₹<span id="total">0</span></p>
+        </div>
+
+        <div class="book-form">
+          <h3>Book Now</h3>
+          <input type="text" id="fullname" placeholder="Full Name" />
+          <input type="email" id="email" placeholder="Email" />
+          <input type="text" id="phone" placeholder="Phone Number" />
+          <button onclick="bookNow()">Book Now</button>
+          <p id="message"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= QUALITY SECTION ================= -->
+    <section class="quality" id="about">
+      <div>Premium Services</div>
+      <div>Quick Support</div>
+      <div>Timely Delivery</div>
+      <div>Affordable Prices</div>
+    </section>
+
+    <!-- ================= NEWSLETTER ================= -->
+    <section class="newsletter">
+      <h3>Subscribe to our Newsletter</h3>
+      <input type="text" placeholder="Full Name" />
+      <input type="email" placeholder="Email" />
+      <button>Subscribe</button>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer" id="contact">
+      <p>CleanWash Laundry Services</p>
+      <p>About Us | Contact Us | FAQs</p>
+      <p>Follow us on Social Media</p>
+    </footer>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+  </body>
+</html>
