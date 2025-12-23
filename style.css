@@ -2,165 +2,154 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
   font-family: Arial, sans-serif;
 }
-
-/* ================= NAVBAR ================= */
+html {
+  scroll-behavior: smooth;
+} /* NAVBAR */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 40px;
-  background-color: #2196f3;
-  color: white;
+  background-color: #f6f9fd;
+  border-radius: 10px;
 }
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 25px;
+.logo img {
+  width: 70px;
 }
-
-.nav-links li a {
+nav a {
+  margin: 0 12px;
   text-decoration: none;
-  color: white;
-  font-weight: bold;
+  color: black;
+  position: relative;
 }
-
-/* ================= HERO ================= */
+nav a::after {
+  content: "";
+  height: 2px;
+  width: 0;
+  background: #3aa7ff;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s;
+}
+nav a:hover::after {
+  width: 100%;
+}
+.user {
+  background: #e6f2ff;
+  padding: 8px 15px;
+  border-radius: 20px;
+} /* HERO */
 .hero {
   display: flex;
-  align-items: center;
-  padding: 50px;
-  height: 90vh;
-  overflow: hidden;
+  padding: 60px;
+  justify-content: space-between;
 }
-
-.hero-left {
-  width: 50%;
+.hero-text span {
+  color: #3aa7ff;
 }
-
-.hero-left h1 {
-  font-size: 42px;
-  margin-bottom: 20px;
-}
-
-.hero-left p {
-  margin-bottom: 20px;
-}
-
-.hero-left button {
-  padding: 10px 20px;
-  cursor: pointer;
-}
-
-.hero-right {
-  width: 50%;
-}
-
-.hero-right img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* ================= OVERVIEW ================= */
-.overview {
+.hero-img {
+  height: 100px;
+} /* ACHIEVEMENTS */
+.achievements {
+  background: #3aa7ff;
+  color: black;
   display: flex;
   justify-content: space-around;
-  padding: 40px;
-  background-color: #f2f2f2;
+  padding: 25px;
   font-weight: bold;
-}
-
-/* ================= BOOKING ================= */
-.booking {
+} /* SERVICES */
+.services-section {
   display: flex;
-  padding: 50px;
-  gap: 40px;
+  padding: 40px;
+  gap: 30px;
+  background: #f3f3f3;
 }
-
-.services {
-  width: 40%;
+.services,
+.cart {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 50%;
 }
-
-.services h3 {
-  margin-bottom: 20px;
+.small-text {
+  font-size: 13px;
+  color: #555;
 }
-
-.service {
+.service-item {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 15px;
+  margin: 10px 0;
 }
-
-.service button {
-  cursor: pointer;
-}
-
-.info {
-  margin-top: 10px;
+.add-note {
+  margin-top: 160px;
   font-size: 14px;
-  color: gray;
 }
-
-/* CART */
+.circle {
+  border: 1px solid black;
+  border-radius: 50%;
+  padding: 2px 6px;
+  margin-right: 5px;
+} /* CART */
 .cart {
-  width: 60%;
+  background: #f0f0f0;
 }
-
-.cart-items {
-  margin-bottom: 30px;
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
 }
-
-.cart-items ul {
-  margin-top: 10px;
+.empty-cart {
+  text-align: center;
+  padding: 20px;
 }
-
-/* BOOK FORM */
-.book-form input {
-  display: block;
-  margin-bottom: 10px;
-  padding: 8px;
+.total {
+  display: flex;
+  justify-content: space-between;
+} /* BOOK */
+.book input {
   width: 100%;
+  margin: 5px 0;
+  padding: 8px;
 }
-
-.book-form button {
+.book button {
+  width: 100%;
   padding: 10px;
-  cursor: pointer;
-}
-
-/* ================= QUALITY ================= */
-.quality {
+  background: #3aa7ff;
+  color: white;
+  border: none;
+} /* FEATURES */
+.features {
   display: flex;
   justify-content: space-around;
   padding: 40px;
-  background-color: #e3f2fd;
-  font-weight: bold;
-}
-
-/* ================= NEWSLETTER ================= */
+  text-align: center;
+} /* NEWSLETTER */
 .newsletter {
+  background: #3aa7ff;
+  color: white;
   padding: 40px;
   text-align: center;
 }
-
-.newsletter input {
-  margin: 5px;
-  padding: 8px;
+.newsletter h2 {
+  text-align: left;
+  font-style: normal;
 }
-
-/* ================= FOOTER ================= */
-.footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 25px;
+.subscribe-btn {
+  padding: 8px;
+  width: 120px;
+  height: 40px;
+} /* FOOTER */
+footer {
+  background: #e4e4e4;
+  color: rgb(53, 53, 53);
+  display: flex;
+  justify-content: space-around;
+  padding: 30px;
+}
+.social i {
+  font-size: 16px;
+  margin: 0 5px;
 }
